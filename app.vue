@@ -3,17 +3,14 @@
 
 const config = useRuntimeConfig();
 
+const endpoint = '/test/'
+
 const {
   pending,
   error,
   data: todos,
-} = await useAsyncData('todos', () => $fetch(config.public.api, {}));
+} = await useAsyncData('todos', () => $fetch(config.public.apiBase + endpoint, {}));
 
-// const {
-//  pending,
-//  error,
-//  data: todos,
-// } = await useAsyncData('todos', () => $fetch(config.public.api2, {}));
 
 onMounted(() => {
   refresh();

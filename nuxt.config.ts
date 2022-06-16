@@ -7,8 +7,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      api: '',
-      api2: 'https://jsonplaceholder.typicode.com/todos/1',
+      apiBase: ''
     },
   },
 });
